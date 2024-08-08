@@ -9,19 +9,25 @@
 /* Begin PBXBuildFile section */
 		DAAF38092C64E7BE008F33F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF38082C64E7BE008F33F1 /* AppDelegate.swift */; };
 		DAAF380B2C64E7BE008F33F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF380A2C64E7BE008F33F1 /* SceneDelegate.swift */; };
-		DAAF380D2C64E7BE008F33F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF380C2C64E7BE008F33F1 /* ViewController.swift */; };
+		DAAF380D2C64E7BE008F33F1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF380C2C64E7BE008F33F1 /* HomeViewController.swift */; };
 		DAAF38122C64E7BF008F33F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAAF38112C64E7BF008F33F1 /* Assets.xcassets */; };
 		DAAF38152C64E7BF008F33F1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DAAF38142C64E7BF008F33F1 /* Base */; };
+		DAAF381D2C64FA91008F33F1 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF381C2C64FA91008F33F1 /* MainTabBarController.swift */; };
+		DAAF381F2C64FC1E008F33F1 /* FlightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF381E2C64FC1E008F33F1 /* FlightViewController.swift */; };
+		DAAF38212C64FCA6008F33F1 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF38202C64FCA6008F33F1 /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DAAF38052C64E7BE008F33F1 /* AeroDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AeroDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAF38082C64E7BE008F33F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAAF380A2C64E7BE008F33F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DAAF380C2C64E7BE008F33F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DAAF380C2C64E7BE008F33F1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DAAF38112C64E7BF008F33F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAAF38142C64E7BF008F33F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAAF38162C64E7BF008F33F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAAF381C2C64FA91008F33F1 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		DAAF381E2C64FC1E008F33F1 /* FlightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightViewController.swift; sourceTree = "<group>"; };
+		DAAF38202C64FCA6008F33F1 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +62,13 @@
 			children = (
 				DAAF38082C64E7BE008F33F1 /* AppDelegate.swift */,
 				DAAF380A2C64E7BE008F33F1 /* SceneDelegate.swift */,
-				DAAF380C2C64E7BE008F33F1 /* ViewController.swift */,
+				DAAF380C2C64E7BE008F33F1 /* HomeViewController.swift */,
 				DAAF38112C64E7BF008F33F1 /* Assets.xcassets */,
 				DAAF38132C64E7BF008F33F1 /* LaunchScreen.storyboard */,
 				DAAF38162C64E7BF008F33F1 /* Info.plist */,
+				DAAF381C2C64FA91008F33F1 /* MainTabBarController.swift */,
+				DAAF381E2C64FC1E008F33F1 /* FlightViewController.swift */,
+				DAAF38202C64FCA6008F33F1 /* HistoryViewController.swift */,
 			);
 			path = AeroDiary;
 			sourceTree = "<group>";
@@ -134,9 +143,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAAF380D2C64E7BE008F33F1 /* ViewController.swift in Sources */,
+				DAAF380D2C64E7BE008F33F1 /* HomeViewController.swift in Sources */,
 				DAAF38092C64E7BE008F33F1 /* AppDelegate.swift in Sources */,
+				DAAF381D2C64FA91008F33F1 /* MainTabBarController.swift in Sources */,
+				DAAF38212C64FCA6008F33F1 /* HistoryViewController.swift in Sources */,
 				DAAF380B2C64E7BE008F33F1 /* SceneDelegate.swift in Sources */,
+				DAAF381F2C64FC1E008F33F1 /* FlightViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
