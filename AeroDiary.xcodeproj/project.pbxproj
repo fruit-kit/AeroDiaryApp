@@ -10,7 +10,6 @@
 		DAAF38092C64E7BE008F33F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF38082C64E7BE008F33F1 /* AppDelegate.swift */; };
 		DAAF380B2C64E7BE008F33F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF380A2C64E7BE008F33F1 /* SceneDelegate.swift */; };
 		DAAF380D2C64E7BE008F33F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF380C2C64E7BE008F33F1 /* ViewController.swift */; };
-		DAAF38102C64E7BE008F33F1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DAAF380F2C64E7BE008F33F1 /* Base */; };
 		DAAF38122C64E7BF008F33F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAAF38112C64E7BF008F33F1 /* Assets.xcassets */; };
 		DAAF38152C64E7BF008F33F1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DAAF38142C64E7BF008F33F1 /* Base */; };
 /* End PBXBuildFile section */
@@ -20,7 +19,6 @@
 		DAAF38082C64E7BE008F33F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAAF380A2C64E7BE008F33F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DAAF380C2C64E7BE008F33F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DAAF380F2C64E7BE008F33F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAAF38112C64E7BF008F33F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAAF38142C64E7BF008F33F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAAF38162C64E7BF008F33F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,7 +57,6 @@
 				DAAF38082C64E7BE008F33F1 /* AppDelegate.swift */,
 				DAAF380A2C64E7BE008F33F1 /* SceneDelegate.swift */,
 				DAAF380C2C64E7BE008F33F1 /* ViewController.swift */,
-				DAAF380E2C64E7BE008F33F1 /* Main.storyboard */,
 				DAAF38112C64E7BF008F33F1 /* Assets.xcassets */,
 				DAAF38132C64E7BF008F33F1 /* LaunchScreen.storyboard */,
 				DAAF38162C64E7BF008F33F1 /* Info.plist */,
@@ -127,7 +124,6 @@
 			files = (
 				DAAF38122C64E7BF008F33F1 /* Assets.xcassets in Resources */,
 				DAAF38152C64E7BF008F33F1 /* Base in Resources */,
-				DAAF38102C64E7BE008F33F1 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,14 +143,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DAAF380E2C64E7BE008F33F1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DAAF380F2C64E7BE008F33F1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DAAF38132C64E7BF008F33F1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,7 +285,6 @@
 				INFOPLIST_FILE = AeroDiary/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -324,7 +311,6 @@
 				INFOPLIST_FILE = AeroDiary/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
