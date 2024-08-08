@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FlightViewController.swift
 //  AeroDiary
 //
 //  Created by Robert Kotrutsa on 08.08.2024.
@@ -7,17 +7,15 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-
+class FlightViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
         
-        title = "Aero Diary"
+        title = "Flight"
         
     }
-
-
+    
 }
-

@@ -62,15 +62,31 @@
 			children = (
 				DAAF38082C64E7BE008F33F1 /* AppDelegate.swift */,
 				DAAF380A2C64E7BE008F33F1 /* SceneDelegate.swift */,
-				DAAF380C2C64E7BE008F33F1 /* HomeViewController.swift */,
+				DAAF38232C6502CD008F33F1 /* Controllers */,
+				DAAF38222C650298008F33F1 /* Resources */,
+				DAAF38162C64E7BF008F33F1 /* Info.plist */,
+			);
+			path = AeroDiary;
+			sourceTree = "<group>";
+		};
+		DAAF38222C650298008F33F1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				DAAF38112C64E7BF008F33F1 /* Assets.xcassets */,
 				DAAF38132C64E7BF008F33F1 /* LaunchScreen.storyboard */,
-				DAAF38162C64E7BF008F33F1 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DAAF38232C6502CD008F33F1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				DAAF381C2C64FA91008F33F1 /* MainTabBarController.swift */,
+				DAAF380C2C64E7BE008F33F1 /* HomeViewController.swift */,
 				DAAF381E2C64FC1E008F33F1 /* FlightViewController.swift */,
 				DAAF38202C64FCA6008F33F1 /* HistoryViewController.swift */,
 			);
-			path = AeroDiary;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
