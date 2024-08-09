@@ -16,7 +16,23 @@
 		DAAF381F2C64FC1E008F33F1 /* FlightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF381E2C64FC1E008F33F1 /* FlightViewController.swift */; };
 		DAAF38212C64FCA6008F33F1 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF38202C64FCA6008F33F1 /* HistoryViewController.swift */; };
 		DAAF38262C650B00008F33F1 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF38252C650B00008F33F1 /* UIColor+Extensions.swift */; };
+		DAAF382B2C660A14008F33F1 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = DAAF382A2C660A14008F33F1 /* SnapKit-Dynamic */; };
+		DAAF382C2C660B26008F33F1 /* SnapKit-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = DAAF382A2C660A14008F33F1 /* SnapKit-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DAAF382D2C660B26008F33F1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DAAF382C2C660B26008F33F1 /* SnapKit-Dynamic in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DAAF38052C64E7BE008F33F1 /* AeroDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AeroDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAAF382B2C660A14008F33F1 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,12 +127,16 @@
 				DAAF38012C64E7BE008F33F1 /* Sources */,
 				DAAF38022C64E7BE008F33F1 /* Frameworks */,
 				DAAF38032C64E7BE008F33F1 /* Resources */,
+				DAAF382D2C660B26008F33F1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = AeroDiary;
+			packageProductDependencies = (
+				DAAF382A2C660A14008F33F1 /* SnapKit-Dynamic */,
+			);
 			productName = AeroDiary;
 			productReference = DAAF38052C64E7BE008F33F1 /* AeroDiary.app */;
 			productType = "com.apple.product-type.application";
@@ -144,6 +165,9 @@
 				Base,
 			);
 			mainGroup = DAAF37FC2C64E7BE008F33F1;
+			packageReferences = (
+				DAAF38272C660A14008F33F1 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = DAAF38062C64E7BE008F33F1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -387,6 +411,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DAAF38272C660A14008F33F1 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DAAF382A2C660A14008F33F1 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DAAF38272C660A14008F33F1 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DAAF37FD2C64E7BE008F33F1 /* Project object */;
 }

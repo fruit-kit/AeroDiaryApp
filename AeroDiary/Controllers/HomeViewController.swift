@@ -7,6 +7,8 @@
 
 import UIKit
 
+import SnapKit
+
 class HomeViewController: UIViewController {
     
     private let logoImageView: UIImageView = {
