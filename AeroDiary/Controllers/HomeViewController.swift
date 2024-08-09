@@ -11,6 +11,8 @@ import SnapKit
 
 class HomeViewController: UIViewController {
     
+    // MARK: - Properties
+    
     private let logoImageView: UIImageView = {
         
         let imageView = UIImageView()
@@ -31,7 +33,7 @@ class HomeViewController: UIViewController {
         
         label.text = "Recently flights:"
         
-        label.textColor = .customGrayLabel
+        label.textColor = .customGray
         
         label.font = UIFont.systemFont(ofSize: 20)
         
@@ -43,16 +45,48 @@ class HomeViewController: UIViewController {
         
     }()
     
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .customBlack
+        setupMainView()
+        
+        setupNavigationBar()
         
         addSubviews()
+        
+        setupConstraints()
+        
+        setupLogoImageView()
+        
+    }
+    
+    // MARK: - Private Methods
+    
+    private func addSubviews() {
+        
+        view.addSubview(logoImageView)
+        
+        view.addSubview(recentlyFlights)
+        
+    }
+    
+    private func setupMainView() {
+        
+        view.backgroundColor = .customBlack
+        
+    }
+    
+    private func setupNavigationBar() {
         
         title = "Aero Diary"
         
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.customRed]
+        
+    }
+    
+    private func setupConstraints() {
         
         logoImageView.snp.makeConstraints { make in
             
@@ -66,11 +100,7 @@ class HomeViewController: UIViewController {
             
         }
         
-        logoImageView.layer.cornerRadius = 20
-        
-        logoImageView.layer.masksToBounds = true
-        
-        recentlyFlights.snp.makeConstraints({ make in
+        recentlyFlights.snp.makeConstraints { make in
             
             make.top.equalTo(logoImageView.snp.bottom).offset(16)
             
@@ -78,15 +108,15 @@ class HomeViewController: UIViewController {
             
             make.trailing.equalTo(view.snp.trailing).offset(-16)
             
-        })
+        }
         
     }
     
-    private func addSubviews() {
+    private func setupLogoImageView() {
         
-        view.addSubview(logoImageView)
+        logoImageView.layer.cornerRadius = 20
         
-        view.addSubview(recentlyFlights)
+        logoImageView.layer.masksToBounds = true
         
     }
     
