@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "1659985184_8-kartinkin-net-p-krasivii-fon-s-samoletom-krasivo-8.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
