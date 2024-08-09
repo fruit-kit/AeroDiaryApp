@@ -36,12 +36,17 @@ class HomeViewController: UIViewController {
         
         view.addSubview(logoImageView)
         
-        NSLayoutConstraint.activate([
-            logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
-            logoImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            logoImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            logoImageView.heightAnchor.constraint(equalTo: logoImageView.widthAnchor, multiplier: 0.6)
-        ])
+        logoImageView.snp.makeConstraints { make in
+            
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(16)
+            
+            make.leading.equalTo(view.snp.leading).offset(16)
+            
+            make.trailing.equalTo(view.snp.trailing).offset(-16)
+            
+            make.height.equalTo(logoImageView.snp.width).multipliedBy(0.6)
+            
+        }
         
         logoImageView.layer.cornerRadius = 20
         
