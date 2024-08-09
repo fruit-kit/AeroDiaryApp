@@ -11,6 +11,10 @@ class MainTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tabBar.tintColor = .customRed
+        
+        tabBar.unselectedItemTintColor = .customGray
 
         let homeNavController = UINavigationController(rootViewController: HomeViewController())
         

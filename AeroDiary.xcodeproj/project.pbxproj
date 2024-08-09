@@ -15,6 +15,7 @@
 		DAAF381D2C64FA91008F33F1 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF381C2C64FA91008F33F1 /* MainTabBarController.swift */; };
 		DAAF381F2C64FC1E008F33F1 /* FlightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF381E2C64FC1E008F33F1 /* FlightViewController.swift */; };
 		DAAF38212C64FCA6008F33F1 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF38202C64FCA6008F33F1 /* HistoryViewController.swift */; };
+		DAAF38262C650B00008F33F1 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF38252C650B00008F33F1 /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		DAAF381C2C64FA91008F33F1 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		DAAF381E2C64FC1E008F33F1 /* FlightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightViewController.swift; sourceTree = "<group>"; };
 		DAAF38202C64FCA6008F33F1 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		DAAF38252C650B00008F33F1 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				DAAF38082C64E7BE008F33F1 /* AppDelegate.swift */,
 				DAAF380A2C64E7BE008F33F1 /* SceneDelegate.swift */,
 				DAAF38232C6502CD008F33F1 /* Controllers */,
+				DAAF38242C650A58008F33F1 /* Extensions */,
 				DAAF38222C650298008F33F1 /* Resources */,
 				DAAF38162C64E7BF008F33F1 /* Info.plist */,
 			);
@@ -87,6 +90,14 @@
 				DAAF38202C64FCA6008F33F1 /* HistoryViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DAAF38242C650A58008F33F1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DAAF38252C650B00008F33F1 /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +174,7 @@
 				DAAF38092C64E7BE008F33F1 /* AppDelegate.swift in Sources */,
 				DAAF381D2C64FA91008F33F1 /* MainTabBarController.swift in Sources */,
 				DAAF38212C64FCA6008F33F1 /* HistoryViewController.swift in Sources */,
+				DAAF38262C650B00008F33F1 /* UIColor+Extensions.swift in Sources */,
 				DAAF380B2C64E7BE008F33F1 /* SceneDelegate.swift in Sources */,
 				DAAF381F2C64FC1E008F33F1 /* FlightViewController.swift in Sources */,
 			);
