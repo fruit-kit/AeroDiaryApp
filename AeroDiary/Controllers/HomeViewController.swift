@@ -45,6 +45,16 @@ class HomeViewController: UIViewController {
         
     }()
     
+    private let tableView: UITableView = {
+        
+        let tableView = UITableView()
+        
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return tableView
+        
+    }()
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -60,6 +70,16 @@ class HomeViewController: UIViewController {
         
         setupLogoImageView()
         
+        tableView.delegate = self
+        
+        tableView.dataSource = self
+        
+        tableView.separatorStyle = .none
+        
+        tableView.backgroundColor = .customBlack
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
     }
     
     // MARK: - Private Methods
@@ -69,6 +89,8 @@ class HomeViewController: UIViewController {
         view.addSubview(logoImageView)
         
         view.addSubview(recentlyFlights)
+        
+        view.addSubview(tableView)
         
     }
     
@@ -82,7 +104,7 @@ class HomeViewController: UIViewController {
         
         title = "Aero Diary"
         
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.customRed]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.customRed, .font: UIFont.boldSystemFont(ofSize: 24)]
         
     }
     
@@ -90,7 +112,7 @@ class HomeViewController: UIViewController {
         
         logoImageView.snp.makeConstraints { make in
             
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(16)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(8)
             
             make.leading.equalTo(view.snp.leading).offset(16)
             
@@ -110,6 +132,18 @@ class HomeViewController: UIViewController {
             
         }
         
+        tableView.snp.makeConstraints { make in
+            
+            make.top.equalTo(recentlyFlights.snp.bottom).offset(16)
+            
+            make.leading.equalTo(view.snp.leading)
+            
+            make.trailing.equalTo(view.snp.trailing)
+            
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+            
+        }
+        
     }
     
     private func setupLogoImageView() {
@@ -122,3 +156,110 @@ class HomeViewController: UIViewController {
     
 }
 
+// MARK: - Extensions
+
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        3
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        cell.backgroundColor = .customBlack
+        
+        cell.selectionStyle = .none
+        
+        cell.contentView.subviews.forEach {
+            
+            $0.removeFromSuperview()
+            
+        }
+        
+        let customView = UIView()
+        
+        customView.backgroundColor = .customCellColor
+        
+        customView.layer.cornerRadius = 20
+        
+        customView.layer.masksToBounds = true
+        
+        cell.contentView.addSubview(customView)
+        
+        customView.snp.makeConstraints { make in
+            
+            make.top.equalTo(cell.contentView.snp.top).offset(8)
+            
+            make.leading.equalTo(cell.contentView.snp.leading).offset(16)
+            
+            make.trailing.equalTo(cell.contentView.snp.trailing).offset(-16)
+            
+            make.bottom.equalTo(cell.contentView.snp.bottom).offset(-8)
+            
+        }
+        
+        let flightNameLabel = UILabel()
+        
+        flightNameLabel.text = "Flight name ✈︎"
+        
+        flightNameLabel.textColor = .white
+        
+        let routeLabel = UILabel()
+        
+        routeLabel.text = "Route"
+        
+        routeLabel.textColor = .customGray
+        
+        let stackView = UIStackView(arrangedSubviews: [flightNameLabel, routeLabel])
+        
+        stackView.axis = .vertical
+        
+        stackView.spacing = 4
+        
+        stackView.alignment = .leading
+        
+        customView.addSubview(stackView)
+        
+        stackView.snp.makeConstraints { make in
+            
+            make.leading.equalTo(customView.snp.leading).offset(16)
+            
+            make.centerY.equalTo(customView)
+            
+            make.trailing.lessThanOrEqualTo(customView.snp.trailing).offset(-40)
+            
+        }
+        
+        let arrowImageView = UIImageView()
+        
+        arrowImageView.image = UIImage(systemName: "chevron.compact.right")
+        
+        arrowImageView.tintColor = .white
+        
+        customView.addSubview(arrowImageView)
+        
+        arrowImageView.snp.makeConstraints { make in
+            
+            make.trailing.equalTo(customView.snp.trailing).offset(-16)
+            
+            make.centerY.equalTo(customView)
+            
+            make.width.height.equalTo(24)
+            
+        }
+        
+        return cell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        88
+        
+    }
+    
+}
