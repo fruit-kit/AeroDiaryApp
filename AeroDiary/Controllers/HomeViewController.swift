@@ -24,17 +24,35 @@ class HomeViewController: UIViewController {
         return imageView
         
     }()
-
+    
+    private let recentlyFlights: UILabel = {
+        
+        let label = UILabel()
+        
+        label.text = "Recently flights:"
+        
+        label.textColor = .customGrayLabel
+        
+        label.font = UIFont.systemFont(ofSize: 20)
+        
+        label.textAlignment = .center
+        
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        return label
+        
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .customBlack
         
+        addSubviews()
+        
         title = "Aero Diary"
         
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.customRed]
-        
-        view.addSubview(logoImageView)
         
         logoImageView.snp.makeConstraints { make in
             
@@ -52,7 +70,25 @@ class HomeViewController: UIViewController {
         
         logoImageView.layer.masksToBounds = true
         
+        recentlyFlights.snp.makeConstraints({ make in
+            
+            make.top.equalTo(logoImageView.snp.bottom).offset(16)
+            
+            make.leading.equalTo(view.snp.leading).offset(16)
+            
+            make.trailing.equalTo(view.snp.trailing).offset(-16)
+            
+        })
+        
     }
-
+    
+    private func addSubviews() {
+        
+        view.addSubview(logoImageView)
+        
+        view.addSubview(recentlyFlights)
+        
+    }
+    
 }
 

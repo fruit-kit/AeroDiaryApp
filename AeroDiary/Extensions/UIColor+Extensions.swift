@@ -15,4 +15,6 @@ extension UIColor {
     
     static let customGray = UIColor(red: 80/255, green: 80/255, blue: 80/255, alpha: 1.0)
     
+    static let customGrayLabel = UIColor(red: 80/255, green: 80/255, blue: 80/255, alpha: 1.0)
+    
 }
