@@ -27,7 +27,7 @@ class HomeViewController: UIViewController {
         
     }()
     
-    private let recentlyFlights: UILabel = {
+    private let recentlyFlightsLabel: UILabel = {
         
         let label = UILabel()
         
@@ -70,15 +70,7 @@ class HomeViewController: UIViewController {
         
         setupLogoImageView()
         
-        tableView.delegate = self
-        
-        tableView.dataSource = self
-        
-        tableView.separatorStyle = .none
-        
-        tableView.backgroundColor = .customBlack
-        
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        setupTableView()
         
     }
     
@@ -88,7 +80,7 @@ class HomeViewController: UIViewController {
         
         view.addSubview(logoImageView)
         
-        view.addSubview(recentlyFlights)
+        view.addSubview(recentlyFlightsLabel)
         
         view.addSubview(tableView)
         
@@ -122,7 +114,7 @@ class HomeViewController: UIViewController {
             
         }
         
-        recentlyFlights.snp.makeConstraints { make in
+        recentlyFlightsLabel.snp.makeConstraints { make in
             
             make.top.equalTo(logoImageView.snp.bottom).offset(16)
             
@@ -134,7 +126,7 @@ class HomeViewController: UIViewController {
         
         tableView.snp.makeConstraints { make in
             
-            make.top.equalTo(recentlyFlights.snp.bottom).offset(16)
+            make.top.equalTo(recentlyFlightsLabel.snp.bottom).offset(16)
             
             make.leading.equalTo(view.snp.leading)
             
@@ -154,6 +146,20 @@ class HomeViewController: UIViewController {
         
     }
     
+    private func setupTableView() {
+        
+        tableView.delegate = self
+        
+        tableView.dataSource = self
+        
+        tableView.separatorStyle = .none
+        
+        tableView.backgroundColor = .customBlack
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+    }
+    
 }
 
 // MARK: - Extensions
@@ -162,7 +168,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        3
+        4
         
     }
     
