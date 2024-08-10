@@ -208,15 +208,19 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             
         }
         
+        let flights = FlightsManager.shared.flights
+        
+        let index = indexPath.row
+        
         let flightNameLabel = UILabel()
         
-        flightNameLabel.text = "Flight name ✈︎"
+        flightNameLabel.text = flights[index].flightName
         
         flightNameLabel.textColor = .white
         
         let routeLabel = UILabel()
         
-        routeLabel.text = "Route"
+        routeLabel.text = flights[index].route
         
         routeLabel.textColor = .customGray
         
