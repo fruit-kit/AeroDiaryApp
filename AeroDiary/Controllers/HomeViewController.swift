@@ -140,7 +140,7 @@ class HomeViewController: UIViewController {
     
     private func setupLogoImageView() {
         
-        logoImageView.layer.cornerRadius = 20
+        logoImageView.layer.cornerRadius = 10
         
         logoImageView.layer.masksToBounds = true
         
@@ -190,7 +190,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         
         customView.backgroundColor = .customCellColor
         
-        customView.layer.cornerRadius = 20
+        customView.layer.cornerRadius = 10
         
         customView.layer.masksToBounds = true
         

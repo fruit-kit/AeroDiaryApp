@@ -166,6 +166,8 @@ class FlightViewController: UIViewController {
         
         button.layer.cornerRadius = 10
         
+        button.addTarget(self, action: #selector(addFlightButtonPressed), for: .touchUpInside)
+        
         button.snp.makeConstraints { make in
             
             make.height.equalTo(50)
@@ -188,6 +190,12 @@ class FlightViewController: UIViewController {
         setupConstraints()
         
         setupDatePicker()
+        
+    }
+    
+    @objc func addFlightButtonPressed() {
+        
+        print("addFlightButtonPressed")
         
     }
     
