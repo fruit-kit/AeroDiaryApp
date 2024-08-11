@@ -196,7 +196,19 @@ class FlightViewController: UIViewController {
     
     @objc func addFlightButtonPressed() {
         
-        print("addFlightButtonPressed")
+        guard let flightName = flightNameTextField.text,
+                  let route = routeTextField.text,
+                  let aircraftType = aircraftTypeTextField.text,
+                  let dateTime = dateTimeTextField.text,
+                  let notes = notesTextField.text else {
+                print("Some fields are empty")
+                return
+            }
+
+            let newFlight = FlightsManager.Flight(flightName: flightName, route: route, aircraftType: aircraftType, dateTime: dateTime, notes: notes)
+            FlightsManager.shared.flights.append(newFlight)
+            
+            print("Flight added: \(newFlight)")
         
     }
     

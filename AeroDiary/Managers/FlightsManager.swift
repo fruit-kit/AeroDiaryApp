@@ -15,12 +15,18 @@ class FlightsManager {
     
     var flights: [Flight] = []
     
-}
-
-struct Flight {
-    
-    let flightName: String
-    
-    let route: String
+    struct Flight {
+        
+        let flightName: String
+        
+        let route: String
+        
+        let aircraftType: String
+        
+        let dateTime: String
+        
+        let notes: String
+        
+    }
     
 }

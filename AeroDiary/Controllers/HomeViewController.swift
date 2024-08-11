@@ -74,6 +74,13 @@ class HomeViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+        
+    }
+    
     // MARK: - Private Methods
     
     private func addSubviews() {
@@ -168,7 +175,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        4
+        FlightsManager.shared.flights.count
         
     }
     
@@ -208,8 +215,6 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             
         }
         
-        let flights = FlightsManager.shared.flights
-        
         let index = indexPath.row
         
         let flightNameLabel = UILabel()
@@ -219,20 +224,10 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         let routeLabel = UILabel()
         
         routeLabel.textColor = .customGray
-        
-        if flights.count != 0 {
             
-            flightNameLabel.text = flights[index].flightName
+            flightNameLabel.text = FlightsManager.shared.flights[index].flightName
             
-            routeLabel.text = flights[index].route
-            
-        } else {
-            
-            flightNameLabel.text = "N/A"
-            
-            routeLabel.text = "N/A"
-            
-        }
+            routeLabel.text = FlightsManager.shared.flights[index].route
         
         let stackView = UIStackView(arrangedSubviews: [flightNameLabel, routeLabel])
         
