@@ -214,15 +214,25 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         
         let flightNameLabel = UILabel()
         
-        flightNameLabel.text = flights[index].flightName
-        
         flightNameLabel.textColor = .white
         
         let routeLabel = UILabel()
         
-        routeLabel.text = flights[index].route
-        
         routeLabel.textColor = .customGray
+        
+        if flights.count != 0 {
+            
+            flightNameLabel.text = flights[index].flightName
+            
+            routeLabel.text = flights[index].route
+            
+        } else {
+            
+            flightNameLabel.text = "N/A"
+            
+            routeLabel.text = "N/A"
+            
+        }
         
         let stackView = UIStackView(arrangedSubviews: [flightNameLabel, routeLabel])
         
