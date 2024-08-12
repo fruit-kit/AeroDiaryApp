@@ -11,8 +11,20 @@ class HistoryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        setupMainView()
+        
+        setupNavigationBar()
+        
+    }
+    
+    private func setupMainView() {
+        
         view.backgroundColor = .customBlack
+        
+    }
+    
+    private func setupNavigationBar() {
         
         title = "History"
         
