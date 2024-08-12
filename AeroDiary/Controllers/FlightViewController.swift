@@ -210,6 +210,8 @@ class FlightViewController: UIViewController {
             
             print("Flight added: \(newFlight)")
         
+        view.endEditing(true)
+        
     }
     
     private func setupMainView() {
