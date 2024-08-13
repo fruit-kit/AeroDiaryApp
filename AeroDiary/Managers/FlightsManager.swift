@@ -21,8 +21,6 @@ class FlightsManager {
         
         let route: String
         
-        let aircraftType: String
-        
         let dateTime: String
         
         let notes: String

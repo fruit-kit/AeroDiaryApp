@@ -87,28 +87,6 @@ class FlightViewController: UIViewController {
         
     }()
     
-    let aircraftTypeTextField: UITextField = {
-        
-        let textField = UITextField()
-        
-        textField.placeholder = "Aircraft type:"
-        
-        textField.textColor = .white
-        
-        let attributes: [NSAttributedString.Key: Any] = [
-            .foregroundColor: UIColor.darkGray
-        ]
-        
-        textField.attributedPlaceholder = NSAttributedString(string: textField.placeholder ?? "", attributes: attributes)
-        
-        textField.borderStyle = .roundedRect
-        
-        textField.backgroundColor = .customCellColor
-        
-        return textField
-        
-    }()
-    
     let dateTimeTextField: UITextField = {
         
         let textField = UITextField()
@@ -198,14 +176,13 @@ class FlightViewController: UIViewController {
         
         guard let flightName = flightNameTextField.text,
                   let route = routeTextField.text,
-                  let aircraftType = aircraftTypeTextField.text,
                   let dateTime = dateTimeTextField.text,
                   let notes = notesTextField.text else {
                 print("Some fields are empty")
                 return
             }
 
-            let newFlight = FlightsManager.Flight(flightName: flightName, route: route, aircraftType: aircraftType, dateTime: dateTime, notes: notes)
+            let newFlight = FlightsManager.Flight(flightName: flightName, route: route, dateTime: dateTime, notes: notes)
             FlightsManager.shared.flights.append(newFlight)
             
             print("Flight added: \(newFlight)")
@@ -308,8 +285,6 @@ class FlightViewController: UIViewController {
         stackView.addArrangedSubview(flightNameTextField)
         
         stackView.addArrangedSubview(routeTextField)
-        
-        stackView.addArrangedSubview(aircraftTypeTextField)
         
         stackView.addArrangedSubview(dateTimeTextField)
         
