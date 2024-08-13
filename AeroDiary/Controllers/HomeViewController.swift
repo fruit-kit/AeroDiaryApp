@@ -55,6 +55,8 @@ class HomeViewController: UIViewController {
         
     }()
     
+    private var recentFlights: [FlightsManager.Flight] = []
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -77,6 +79,8 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        loadRecentFlights()
+        
         tableView.reloadData()
         
     }
@@ -90,6 +94,18 @@ class HomeViewController: UIViewController {
         view.addSubview(recentFlightsLabel)
         
         view.addSubview(tableView)
+        
+    }
+    
+    private func loadRecentFlights() {
+        
+        let allFlights = FlightsManager.shared.flights
+        
+        let count = allFlights.count
+        
+        let start = max(count - 5, 0)
+        
+        recentFlights = Array(allFlights[start..<count])
         
     }
     
@@ -175,7 +191,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        FlightsManager.shared.flights.count
+        recentFlights.count
         
     }
     
@@ -224,10 +240,10 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         let routeLabel = UILabel()
         
         routeLabel.textColor = .customGray
-            
+        
         flightNumberLabel.text = FlightsManager.shared.flights[index].flightNumber
-            
-            routeLabel.text = FlightsManager.shared.flights[index].route
+        
+        routeLabel.text = FlightsManager.shared.flights[index].route
         
         let stackView = UIStackView(arrangedSubviews: [flightNumberLabel, routeLabel])
         
