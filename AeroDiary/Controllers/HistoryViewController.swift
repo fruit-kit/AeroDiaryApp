@@ -134,7 +134,7 @@ class HistoryViewController: UIViewController {
             
             self.flights.sort {
                 
-                $0.flightName < $1.flightName
+                $0.flightNumber < $1.flightNumber
                 
             }
             
@@ -194,11 +194,11 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
             
         }
         
-        let flightNameLabel = UILabel()
+        let flightNumberLabel = UILabel()
         
-        flightNameLabel.textColor = .white
+        flightNumberLabel.textColor = .white
         
-        flightNameLabel.text = flights[indexPath.row].flightName
+        flightNumberLabel.text = flights[indexPath.row].flightNumber
         
         let routeLabel = UILabel()
         
@@ -206,7 +206,7 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
         
         routeLabel.text = flights[indexPath.row].route
         
-        let stackView = UIStackView(arrangedSubviews: [flightNameLabel, routeLabel])
+        let stackView = UIStackView(arrangedSubviews: [flightNumberLabel, routeLabel])
         
         stackView.axis = .vertical
         

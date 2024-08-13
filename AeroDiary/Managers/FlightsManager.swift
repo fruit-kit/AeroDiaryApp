@@ -17,7 +17,7 @@ class FlightsManager {
     
     struct Flight {
         
-        let flightName: String
+        let flightNumber: String
         
         let route: String
         

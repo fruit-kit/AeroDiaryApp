@@ -217,19 +217,19 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         
         let index = indexPath.row
         
-        let flightNameLabel = UILabel()
+        let flightNumberLabel = UILabel()
         
-        flightNameLabel.textColor = .white
+        flightNumberLabel.textColor = .white
         
         let routeLabel = UILabel()
         
         routeLabel.textColor = .customGray
             
-            flightNameLabel.text = FlightsManager.shared.flights[index].flightName
+        flightNumberLabel.text = FlightsManager.shared.flights[index].flightNumber
             
             routeLabel.text = FlightsManager.shared.flights[index].route
         
-        let stackView = UIStackView(arrangedSubviews: [flightNameLabel, routeLabel])
+        let stackView = UIStackView(arrangedSubviews: [flightNumberLabel, routeLabel])
         
         stackView.axis = .vertical
         

@@ -43,11 +43,11 @@ class FlightViewController: UIViewController {
         
     }()
     
-    let flightNameTextField: UITextField = {
+    let flightNumberTextField: UITextField = {
         
         let textField = UITextField()
         
-        textField.placeholder = "Flight name:"
+        textField.placeholder = "Flight number:"
         
         textField.textColor = .white
         
@@ -174,7 +174,7 @@ class FlightViewController: UIViewController {
     
     @objc func addFlightButtonPressed() {
         
-        guard let flightName = flightNameTextField.text,
+        guard let flightNumber = flightNumberTextField.text,
                   let route = routeTextField.text,
                   let dateTime = dateTimeTextField.text,
                   let notes = notesTextField.text else {
@@ -182,7 +182,7 @@ class FlightViewController: UIViewController {
                 return
             }
 
-            let newFlight = FlightsManager.Flight(flightName: flightName, route: route, dateTime: dateTime, notes: notes)
+            let newFlight = FlightsManager.Flight(flightNumber: flightNumber, route: route, dateTime: dateTime, notes: notes)
             FlightsManager.shared.flights.append(newFlight)
             
             print("Flight added: \(newFlight)")
@@ -282,7 +282,7 @@ class FlightViewController: UIViewController {
         
         contentView.addSubview(stackView)
         
-        stackView.addArrangedSubview(flightNameTextField)
+        stackView.addArrangedSubview(flightNumberTextField)
         
         stackView.addArrangedSubview(routeTextField)
         
