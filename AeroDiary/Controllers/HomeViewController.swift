@@ -27,11 +27,11 @@ class HomeViewController: UIViewController {
         
     }()
     
-    private let recentlyFlightsLabel: UILabel = {
+    private let recentFlightsLabel: UILabel = {
         
         let label = UILabel()
         
-        label.text = "Recently flights:"
+        label.text = "Recent flights:"
         
         label.textColor = .customGray
         
@@ -87,7 +87,7 @@ class HomeViewController: UIViewController {
         
         view.addSubview(logoImageView)
         
-        view.addSubview(recentlyFlightsLabel)
+        view.addSubview(recentFlightsLabel)
         
         view.addSubview(tableView)
         
@@ -121,7 +121,7 @@ class HomeViewController: UIViewController {
             
         }
         
-        recentlyFlightsLabel.snp.makeConstraints { make in
+        recentFlightsLabel.snp.makeConstraints { make in
             
             make.top.equalTo(logoImageView.snp.bottom).offset(16)
             
@@ -133,7 +133,7 @@ class HomeViewController: UIViewController {
         
         tableView.snp.makeConstraints { make in
             
-            make.top.equalTo(recentlyFlightsLabel.snp.bottom).offset(16)
+            make.top.equalTo(recentFlightsLabel.snp.bottom).offset(16)
             
             make.leading.equalTo(view.snp.leading)
             
