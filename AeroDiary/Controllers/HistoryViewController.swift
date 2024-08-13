@@ -11,20 +11,15 @@ import SnapKit
 
 class HistoryViewController: UIViewController {
     
+    // MARK: - Properties
+    
     private let tableView = UITableView()
     
     private let sortButton = UIButton()
     
     private var flights: [FlightsManager.Flight] = FlightsManager.shared.flights
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        flights = FlightsManager.shared.flights
-        
-        tableView.reloadData()
-        
-    }
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +35,17 @@ class HistoryViewController: UIViewController {
         setupConstraints()
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        flights = FlightsManager.shared.flights
+        
+        tableView.reloadData()
+        
+    }
+    
+    // MARK: - Private Methods
     
     private func setupMainView() {
         
@@ -114,6 +120,8 @@ class HistoryViewController: UIViewController {
         
     }
     
+    // MARK: - objc Methods
+    
     @objc private func sortFlights() {
         
         let alert = UIAlertController(title: "Sort by", message: nil, preferredStyle: .actionSheet)
@@ -149,6 +157,8 @@ class HistoryViewController: UIViewController {
     }
     
 }
+
+// MARK: - Extensions
 
 extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
     

@@ -11,6 +11,8 @@ import SnapKit
 
 class FlightViewController: UIViewController {
     
+    // MARK: - Properties
+    
     let scrollView: UIScrollView = {
         
         let scrollView = UIScrollView()
@@ -157,6 +159,8 @@ class FlightViewController: UIViewController {
         
     }()
     
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -171,6 +175,8 @@ class FlightViewController: UIViewController {
         setupDatePicker()
         
     }
+    
+    // MARK: - objc Methods
     
     @objc func addFlightButtonPressed() {
         
@@ -190,6 +196,26 @@ class FlightViewController: UIViewController {
         view.endEditing(true)
         
     }
+    
+    @objc private func doneTapped() {
+        
+        if let datePicker = dateTimeTextField.inputView as? UIDatePicker {
+            
+            let dateFormatter = DateFormatter()
+            
+            dateFormatter.dateStyle = .medium
+            
+            dateFormatter.timeStyle = .short
+            
+            dateTimeTextField.text = dateFormatter.string(from: datePicker.date)
+            
+        }
+        
+        dateTimeTextField.resignFirstResponder()
+        
+    }
+    
+    // MARK: - Private Methods
     
     private func setupMainView() {
         
@@ -229,24 +255,6 @@ class FlightViewController: UIViewController {
         toolbar.setItems([doneButton], animated: true)
         
         dateTimeTextField.inputAccessoryView = toolbar
-        
-    }
-    
-    @objc private func doneTapped() {
-        
-        if let datePicker = dateTimeTextField.inputView as? UIDatePicker {
-            
-            let dateFormatter = DateFormatter()
-            
-            dateFormatter.dateStyle = .medium
-            
-            dateFormatter.timeStyle = .short
-            
-            dateTimeTextField.text = dateFormatter.string(from: datePicker.date)
-            
-        }
-        
-        dateTimeTextField.resignFirstResponder()
         
     }
     
