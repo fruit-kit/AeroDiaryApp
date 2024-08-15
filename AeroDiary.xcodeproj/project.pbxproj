@@ -19,6 +19,7 @@
 		DAAF382B2C660A14008F33F1 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = DAAF382A2C660A14008F33F1 /* SnapKit-Dynamic */; };
 		DAAF382C2C660B26008F33F1 /* SnapKit-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = DAAF382A2C660A14008F33F1 /* SnapKit-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		DAAF38302C678063008F33F1 /* FlightsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF382F2C678063008F33F1 /* FlightsManager.swift */; };
+		DAAF38332C6E594A008F33F1 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF38322C6E594A008F33F1 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +49,7 @@
 		DAAF38202C64FCA6008F33F1 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		DAAF38252C650B00008F33F1 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		DAAF382F2C678063008F33F1 /* FlightsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsManager.swift; sourceTree = "<group>"; };
+		DAAF38322C6E594A008F33F1 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				DAAF380C2C64E7BE008F33F1 /* HomeViewController.swift */,
 				DAAF381E2C64FC1E008F33F1 /* FlightViewController.swift */,
 				DAAF38202C64FCA6008F33F1 /* HistoryViewController.swift */,
+				DAAF38322C6E594A008F33F1 /* DetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			files = (
 				DAAF380D2C64E7BE008F33F1 /* HomeViewController.swift in Sources */,
 				DAAF38092C64E7BE008F33F1 /* AppDelegate.swift in Sources */,
+				DAAF38332C6E594A008F33F1 /* DetailsViewController.swift in Sources */,
 				DAAF381D2C64FA91008F33F1 /* MainTabBarController.swift in Sources */,
 				DAAF38302C678063008F33F1 /* FlightsManager.swift in Sources */,
 				DAAF38212C64FCA6008F33F1 /* HistoryViewController.swift in Sources */,
