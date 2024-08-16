@@ -12,18 +12,24 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupMainView()
+        
+        setupNavigationBar()
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupMainView() {
+        
+        view.backgroundColor = .customBlack
+        
     }
-    */
+    
+    private func setupNavigationBar() {
+        
+        title = "Details"
+        
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.customRed, .font: UIFont.boldSystemFont(ofSize: 24)]
+        
+    }
 
 }
