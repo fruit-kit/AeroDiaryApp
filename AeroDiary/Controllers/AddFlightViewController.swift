@@ -180,10 +180,18 @@ class AddFlightViewController: UIViewController {
     
     @objc func addFlightButtonPressed() {
         
-        guard let flightNumber = flightNumberTextField.text,
-              let route = routeTextField.text,
-              let dateTime = dateTimeTextField.text,
-              let note = noteTextField.text else {
+        guard let flightNumber = flightNumberTextField.text, !flightNumber.isEmpty,
+              let route = routeTextField.text, !route.isEmpty,
+              let dateTime = dateTimeTextField.text, !dateTime.isEmpty,
+              let note = noteTextField.text, !note.isEmpty else {
+            
+            let alert = UIAlertController(title: "Incomplete Information", message: "Please fill out all the fields before adding the flight", preferredStyle: .alert)
+            
+            let action = UIAlertAction(title: "Ok", style: .default)
+            
+            alert.addAction(action)
+            
+            present(alert, animated: true)
             
             print("Some fields are empty")
             
@@ -196,14 +204,6 @@ class AddFlightViewController: UIViewController {
         FlightsManager.shared.flights.append(newFlight)
         
         print("Flight added: \(newFlight)")
-        
-        flightNumberTextField.text = ""
-        
-        routeTextField.text = ""
-        
-        dateTimeTextField.text = ""
-        
-        noteTextField.text = ""
         
         view.endEditing(true)
         
