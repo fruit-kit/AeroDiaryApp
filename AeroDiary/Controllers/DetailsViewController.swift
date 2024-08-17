@@ -31,8 +31,6 @@ class DetailsViewController: UIViewController {
         
         let flightNumberLabel = UILabel()
         
-        flightNumberLabel.text = "Flight number"
-        
         flightNumberLabel.font = .systemFont(ofSize: 18)
         
         flightNumberLabel.textAlignment = .center
@@ -52,8 +50,6 @@ class DetailsViewController: UIViewController {
     let routeLabel: UILabel = {
         
         let routeLabel = UILabel()
-        
-        routeLabel.text = "Route"
         
         routeLabel.font = .systemFont(ofSize: 18)
         
@@ -75,8 +71,6 @@ class DetailsViewController: UIViewController {
         
         let dateTimeLabel = UILabel()
         
-        dateTimeLabel.text = "Date & time"
-        
         dateTimeLabel.font = .systemFont(ofSize: 18)
         
         dateTimeLabel.textAlignment = .center
@@ -96,8 +90,6 @@ class DetailsViewController: UIViewController {
     let noteLabel: UILabel = {
         
         let noteLabel = UILabel()
-        
-        noteLabel.text = "Note"
         
         noteLabel.font = .systemFont(ofSize: 18)
         
