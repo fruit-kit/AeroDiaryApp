@@ -30,7 +30,7 @@ class MainTabBarController: UITabBarController {
         
             let homeNavController = createNavController(viewController: HomeViewController(), title: "Aero Diary", imageName: "house.fill")
         
-            let flightNavController = createNavController(viewController: FlightViewController(), title: "Flight", imageName: "airplane")
+            let flightNavController = createNavController(viewController: AddFlightViewController(), title: "Flight", imageName: "airplane")
         
             let historyNavController = createNavController(viewController: HistoryViewController(), title: "History", imageName: "calendar.badge.clock")
             

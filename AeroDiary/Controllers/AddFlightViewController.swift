@@ -9,7 +9,7 @@ import UIKit
 
 import SnapKit
 
-class FlightViewController: UIViewController {
+class AddFlightViewController: UIViewController {
     
     // MARK: - Properties
     
