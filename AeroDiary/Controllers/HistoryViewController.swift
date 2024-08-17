@@ -258,6 +258,22 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let detailsViewController = DetailsViewController()
+        
+        detailsViewController.flightNumberLabel.text = FlightsManager.shared.flights[indexPath.row].flightNumber
+        
+        detailsViewController.routeLabel.text = FlightsManager.shared.flights[indexPath.row].route
+        
+        detailsViewController.dateTimeLabel.text = FlightsManager.shared.flights[indexPath.row].dateTime
+        
+        detailsViewController.noteLabel.text = FlightsManager.shared.flights[indexPath.row].note
+        
+        navigationController?.pushViewController(detailsViewController, animated: true)
+        
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         return 88
