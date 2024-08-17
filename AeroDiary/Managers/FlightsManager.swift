@@ -23,7 +23,7 @@ class FlightsManager {
         
         let dateTime: String
         
-        let notes: String
+        let note: String
         
     }
     

@@ -291,6 +291,14 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         
         let detailsViewController = DetailsViewController()
         
+        detailsViewController.flightNumberLabel.text = FlightsManager.shared.flights[indexPath.row].flightNumber
+        
+        detailsViewController.routeLabel.text = FlightsManager.shared.flights[indexPath.row].route
+        
+        detailsViewController.dateTimeLabel.text = FlightsManager.shared.flights[indexPath.row].dateTime
+        
+        detailsViewController.noteLabel.text = FlightsManager.shared.flights[indexPath.row].note
+        
         navigationController?.pushViewController(detailsViewController, animated: true)
         
     }

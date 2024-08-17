@@ -111,7 +111,7 @@ class FlightViewController: UIViewController {
         
     }()
     
-    let notesTextField: UITextField = {
+    let noteTextField: UITextField = {
         
         let textField = UITextField()
         
@@ -183,7 +183,7 @@ class FlightViewController: UIViewController {
         guard let flightNumber = flightNumberTextField.text,
               let route = routeTextField.text,
               let dateTime = dateTimeTextField.text,
-              let notes = notesTextField.text else {
+              let note = noteTextField.text else {
             
             print("Some fields are empty")
             
@@ -191,7 +191,7 @@ class FlightViewController: UIViewController {
             
         }
         
-        let newFlight = FlightsManager.Flight(flightNumber: flightNumber, route: route, dateTime: dateTime, notes: notes)
+        let newFlight = FlightsManager.Flight(flightNumber: flightNumber, route: route, dateTime: dateTime, note: note)
         
         FlightsManager.shared.flights.append(newFlight)
         
@@ -203,7 +203,7 @@ class FlightViewController: UIViewController {
         
         dateTimeTextField.text = ""
         
-        notesTextField.text = ""
+        noteTextField.text = ""
         
         view.endEditing(true)
         
@@ -308,7 +308,7 @@ class FlightViewController: UIViewController {
         
         stackView.addArrangedSubview(dateTimeTextField)
         
-        stackView.addArrangedSubview(notesTextField)
+        stackView.addArrangedSubview(noteTextField)
         
         stackView.addArrangedSubview(addFlightButton)
         
