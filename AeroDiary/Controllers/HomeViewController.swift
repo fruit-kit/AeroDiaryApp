@@ -291,13 +291,13 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         
         let detailsViewController = DetailsViewController()
         
-        detailsViewController.flightNumberLabel.text = FlightsManager.shared.flights[indexPath.row].flightNumber
+        detailsViewController.flightNumberLabel.text = recentFlights[indexPath.row].flightNumber
         
-        detailsViewController.routeLabel.text = FlightsManager.shared.flights[indexPath.row].route
+        detailsViewController.routeLabel.text = recentFlights[indexPath.row].route
         
-        detailsViewController.dateTimeLabel.text = FlightsManager.shared.flights[indexPath.row].dateTime
+        detailsViewController.dateTimeLabel.text = recentFlights[indexPath.row].dateTime
         
-        detailsViewController.noteLabel.text = FlightsManager.shared.flights[indexPath.row].note
+        detailsViewController.noteLabel.text = recentFlights[indexPath.row].note
         
         navigationController?.pushViewController(detailsViewController, animated: true)
         
@@ -306,6 +306,20 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         88
+        
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            
+            FlightsManager.shared.flights.remove(at: indexPath.row)
+            
+            loadRecentFlights()
+            
+            tableView.reloadData()
+            
+        }
         
     }
     
